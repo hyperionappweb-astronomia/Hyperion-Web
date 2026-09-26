@@ -1,0 +1,74 @@
+@reference "../../global.css";
+
+.conteiner {
+    @apply bg-[#4747f2] h-screen flex flex-col p-4 transition-all duration-300 ease-in-out relative select-none z-40 box-border;
+}
+
+.botaoToggle {
+    @apply absolute top-6 bg-[#4747f2] text-white w-7 h-7 rounded-lg border border-white/20 flex items-center justify-center cursor-pointer transition-all duration-300 z-50 hover:bg-[#5a53ed];
+}
+
+.topo {
+    @apply flex items-center mb-8 mt-2 px-1;
+}
+
+.logoIcon {
+    @apply flex items-center justify-center w-80 h-40 rounded-xl;
+}
+
+.logoTexto {
+    @apply text-white font-bold tracking-wider ml-3 text-lg animate-[fadeIn_0.2s_ease-out];
+}
+
+.itemConteiner {
+    @apply flex-1 flex flex-col gap-1.5;
+}
+
+.item {
+    @apply flex items-center p-3 rounded-xl text-white/75 transition-all duration-200 no-underline hover:bg-white/10 hover:text-white;
+}
+
+.item.ativo {
+    @apply bg-white/20 text-white font-medium shadow-sm;
+}
+
+.iconeWrapper {
+    @apply flex items-center justify-center flex-shrink-0;
+}
+
+.rotulo {
+    @apply ml-3.5 text-[0.92rem] whitespace-nowrap animate-[fadeIn_0.2s_ease-out];
+}
+
+.rodapeMenu {
+    @apply flex flex-col gap-3 border-t border-white/10 pt-4 mt-auto;
+}
+
+.themeSwitcher {
+    @apply bg-black/15 rounded-xl p-1 flex gap-1 border border-white/5;
+}
+
+.themeOptionActive {
+    @apply bg-white/15 flex-1 flex items-center justify-center py-1.5 rounded-lg text-xs text-white font-medium;
+}
+
+.themeOption {
+    @apply flex-1 flex items-center justify-center py-1.5 rounded-lg text-xs text-white/40 font-medium;
+}
+
+.perfil {
+    @apply flex items-center p-2 bg-white/10 rounded-xl border border-white/10;
+}
+
+.avatar {
+    @apply w-9 h-9 bg-white/20 rounded-lg flex items-center justify-center text-white flex-shrink-0;
+}
+
+.botaoSair {
+    @apply flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-lg text-white/50 cursor-pointer transition-colors hover:bg-white/10 hover:text-white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-6px); }
+    to { opacity: 1; transform: translateX(0); }
+}

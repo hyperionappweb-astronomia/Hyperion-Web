@@ -1,0 +1,154 @@
+@reference "../global.css";
+
+.conteiner {
+    @apply relative min-h-screen w-full bg-Tomescuro1 text-white font-sans overflow-hidden px-8 md:px-20 lg:px-28 xl:px-36 py-8 selection:bg-Tomclaro1/40;
+}
+
+
+/* --- HEADER --- */
+.header {
+   @apply fixed top-0 left-0 w-full z-50 
+          px-8 md:px-20 lg:px-28 xl:px-36 py-4
+          flex items-center;
+}
+
+.headerConteudo {
+    @apply relative flex items-center w-full gap-30 
+    backdrop-blur-md 
+    border border-Tomclaro1/25 shadow-md rounded-full px-6 py-2;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+}   
+
+
+.logo {
+    @apply flex-1 flex justify-start;
+}
+
+.logotexto {
+    @apply text-[22px] font-bold tracking-widest text-Tomclaro1 uppercase select-none;
+}
+
+.nav {
+    @apply flex-none;
+}
+
+.menu {
+    @apply flex flex-row items-center gap-12 text-[20px] font-medium text-[#FFFFFF];
+}
+
+.animacaomenuhover {
+    @apply hover:text-Tomclaro1 transition-colors duration-200 relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-Tomclaro1 hover:after:w-full after:transition-all after:duration-300;
+}
+
+.login {
+    @apply flex-1 flex justify-end;
+}
+
+.botaologincadastre {
+    @apply inline-block px-10 py-3.5 bg-linear-to-r from-Tomclaro1 to-Tomclaro2 text-white font-medium rounded-full shadow-lg shadow-Tomclaro1/20 hover:opacity-90 transition-opacity duration-300 text-base;
+}
+
+
+/* --- HERO --- */
+
+.hero {
+    @apply relative z-10 flex flex-col items-start gap-5 max-w-3xl mt-30;
+}
+
+.selo {
+    @apply flex items-center gap-1.5 text-xs font-semibold tracking-wide uppercase bg-Tomclaro1/15 text-Tomclaro2 border border-Tomclaro1/30 px-3.5 py-1.5 rounded-full;
+}
+
+.titulo {
+    @apply text-[38px] md:text-[52px] font-bold leading-tight;
+}
+
+.tituloDestaque {
+    @apply text-Tomclaro1;
+}
+
+.paragrafo {
+    @apply text-gray-300 text-[16px] leading-relaxed;
+}
+
+
+/* --- NÍVEIS --- */
+
+.secaoNiveis {
+    @apply relative z-10 mt-28;
+}
+
+.cabecalhoNiveis {
+    @apply flex flex-col gap-2 mb-10 max-w-xl;
+}
+
+.tituloNiveis {
+    @apply text-[30px] font-bold text-Tomclaro1;
+}
+
+.subtituloNiveis {
+    @apply text-gray-400 text-[15px];
+}
+
+.grade {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.card {
+    @apply relative flex flex-col gap-3 rounded-2xl p-6 transition-all duration-300 hover:border-Tomclaro1/50 hover:-translate-y-1;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.cardTopo {
+    @apply flex items-center justify-between;
+}
+
+.numero {
+    @apply flex items-center justify-center w-11 h-11 rounded-xl bg-linear-to-br from-Tomclaro1 to-Tomclaro2 text-white;
+}
+
+.badge {
+    @apply text-[11px] font-semibold text-white/50 bg-white/5 border border-white/10 rounded-full px-2.5 py-1;
+}
+
+.cardPublico {
+    @apply text-xs font-medium text-Tomclaro2 mt-1;
+}
+
+.cardDescricao {
+    @apply text-sm text-white/60 leading-relaxed;
+}
+
+/* --- CTA --- */
+
+.cta {
+    @apply relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 bg-linear-to-r from-Tomclaro2 to-Tomclaro1 rounded-3xl p-10 md:p-12 mt-28 mb-24 shadow-lg shadow-Tomclaro1/20;
+}
+
+.ctaConteudo {
+    @apply flex flex-col gap-2 text-center md:text-left;
+}
+
+.ctaTitulo {
+    @apply text-2xl font-bold;
+}
+
+.ctaTexto {
+    @apply text-white/85 text-sm;
+}
+
+.ctaBotao {
+    @apply flex-shrink-0 bg-Tomescuro1 text-white font-semibold px-8 py-3.5 rounded-full transition-all hover:brightness-125;
+}

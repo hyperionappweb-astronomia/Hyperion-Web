@@ -1,0 +1,5 @@
+@reference "../../global.css";
+
+.layout {
+    @apply min-h-screen w-full bg-Tomescuro1;
+}

@@ -1,0 +1,37 @@
+@reference "../global.css";
+
+
+.conteiner {
+    @apply absolute inset-0 flex flex-col items-center justify-center p-8 rounded-2xl transition-all duration-300 ease-in-out;
+    background-color: rgba(14, 0, 56, 0.9); 
+    backdrop-filter: blur(6px); 
+    z-index: 50; 
+}
+
+.titulo {
+    @apply text-white font-bold mb-2 text-center;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.conteinerMensagem {
+    @apply w-full flex justify-center mb-6;
+}
+
+.mensagem {
+    @apply text-sm text-center font-medium;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+}
+
+.botao {
+    @apply text-white rounded-xl py-3 px-8 text-sm font-semibold transition-all cursor-pointer w-full max-w-[200px];
+    background-color: #4747F2; 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(71, 71, 242, 0.3);
+}
+
+.botao:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 4px 20px rgba(71, 71, 242, 0.5);
+}

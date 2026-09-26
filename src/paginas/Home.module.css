@@ -1,0 +1,156 @@
+@reference "../global.css";
+
+.conteiner {
+    @apply relative min-h-screen w-full bg-Tomescuro1 text-white font-sans overflow-hidden px-8 md:px-20 lg:px-28 xl:px-36 py-8 selection:bg-[#4747F2]/40;
+}
+
+.orbeRoxo {
+    @apply absolute w-[400px] h-[400px] rounded-full blur-[100px] opacity-40 pointer-events-none;
+    background: radial-gradient(circle, #7000ff 0%, transparent 70%);
+    top: 10%;
+    left: 15%;
+}
+
+.orbeAzul {
+    @apply absolute w-[500px] h-[500px] rounded-full blur-[120px] opacity-30 pointer-events-none;
+    background: radial-gradient(circle, #00d4ff 0%, transparent 70%);
+    bottom: 10%;
+    right: 15%;
+}
+
+
+/* --- HEADER --- */
+.header {
+   @apply fixed top-0 left-0 w-full z-50 
+          px-8 md:px-20 lg:px-28 xl:px-36 py-4
+          flex items-center;
+}
+
+.headerConteudo {
+    @apply relative flex items-center w-full gap-30 
+          backdrop-blur-md 
+           border border-Tomclaro1/25 shadow-md rounded-full px-6 py-2;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+}   
+
+.logo {
+    @apply flex-1 flex justify-start;
+}
+
+.logotexto {
+    @apply text-[22px] font-bold tracking-widest text-Tomclaro1 uppercase select-none;
+}
+
+.nav {
+    @apply flex-none;
+}
+
+.menu {
+    @apply flex flex-row items-center gap-12 text-[20px] font-medium text-[#FFFFFF];
+}
+
+.animacaomenuhover {
+    @apply hover:text-Tomclaro1 transition-colors duration-200 relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-Tomclaro1 hover:after:w-full after:transition-all after:duration-300;
+}
+
+.login {
+    @apply flex-1 flex justify-end;
+}
+
+.botaologincadastre {
+    @apply inline-block px-10 py-3.5 bg-linear-to-r from-Tomclaro1 to-Tomclaro2 text-white font-medium rounded-full shadow-lg shadow-Tomclaro1/20 hover:opacity-90 transition-opacity duration-300 text-base;
+}
+
+/* --- SEÇÃO PRINCIPAL (MAIN) --- */
+.main {
+    @apply relative h-full grid grid-cols-1 lg:grid-cols-12 pt-24 lg:pt-32 items-center gap-12 z-10 mt-30;
+}
+
+.textoBoasVindas {
+    @apply lg:col-span-7 flex flex-col justify-center space-y-8 lg:pl-8 p-8
+         backdrop-blur-xl border border-white/10 
+           rounded-3xl;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.titulo {
+    @apply text-4xl md:text-5xl lg:text-[40px] font-bold leading-[1.2] tracking-tight max-w-xl;
+}
+
+.tituloDestaque {
+    @apply text-Tomclaro1;
+}
+
+.containerBotao {
+    @apply pt-2;
+}
+
+.containerPlaneta {
+    @apply lg:col-span-5 relative h-[400px] w-full flex items-center justify-center;
+}
+
+.planeta {
+    @apply absolute top-16 right-16 w-72 h-72 border-2 border-dashed border-Tomclaro2/30 rounded-full flex items-center justify-center text-xs text-gray-400;
+}
+
+/* --- SEÇÃO CONTEÚDO --- */
+.secaoConteudo {
+    @apply relative grid grid-cols-1 lg:grid-cols-12 mt-48 pb-32 items-center gap-16 z-10;
+}
+
+.containerFoguete {
+    @apply lg:col-span-5 flex justify-center lg:justify-start lg:pl-12;
+}
+
+.foguete {
+    @apply w-80 h-80  border-Tomclaro1/30 rounded-2xl flex items-center justify-center text-xs text-gray-400 transform -rotate-12;
+}
+
+.listaConteudo {
+    @apply lg:col-span-7 space-y-10 lg:pl-6 p-8
+            backdrop-blur-md border border-Tomclaro1/20 
+           shadow-md rounded-3xl;
+   background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.tituloSecao {
+    @apply text-[28px] font-bold tracking-widest text-Tomclaro2 uppercase;
+}
+
+.itensLista {
+    @apply space-y-6 max-w-2xl;
+}
+
+.itemCard {
+    @apply flex items-start gap-4 text-[16px] leading-relaxed;
+}
+
+.checkIcon {
+    @apply mt-1 text-Tomclaro2 text-xl font-bold select-none;
+}
+
+.itemTitulo {
+    @apply text-white font-semibold inline-block mr-2;
+}
+
+.itemDescricao {
+    @apply text-gray-300 inline;
+}

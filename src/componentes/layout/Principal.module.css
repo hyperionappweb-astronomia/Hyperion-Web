@@ -1,0 +1,9 @@
+@reference "../../global.css";
+
+.layoutWrapper {
+    @apply flex h-screen w-full bg-[#0a051b] overflow-hidden m-0 p-0;
+}
+
+.conteudoPrincipal {
+    @apply flex-1 h-full overflow-auto p-6;
+}

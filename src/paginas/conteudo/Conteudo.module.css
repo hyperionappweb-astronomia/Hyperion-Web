@@ -1,0 +1,49 @@
+@reference "../../global.css";
+
+.conteiner {
+    @apply w-full h-full text-white;
+}
+
+.cabecalho {
+    @apply mb-8;
+}
+
+.titulo {
+    @apply text-2xl md:text-3xl font-bold;
+}
+
+.subtitulo {
+    @apply text-white/50 text-sm mt-1;
+}
+
+.grade {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-6;
+}
+
+.card {
+    @apply relative bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-3 overflow-hidden cursor-pointer transition-all duration-300 hover:border-Tomclaro1/50 hover:bg-white/[0.07];
+}
+
+.cardTopo {
+    @apply flex items-center justify-between;
+}
+
+.numero {
+    @apply flex items-center justify-center w-11 h-11 rounded-xl bg-linear-to-br from-Tomclaro1 to-Tomclaro2 text-white font-bold text-lg;
+}
+
+.badge {
+    @apply flex items-center gap-1 text-[11px] font-medium text-white/50 bg-white/5 border border-white/10 rounded-full px-2.5 py-1;
+}
+
+.cardTitulo {
+    @apply text-lg font-bold mt-1;
+}
+
+.cardPublico {
+    @apply text-xs font-medium text-Tomclaro2;
+}
+
+.cardDescricao {
+    @apply text-sm text-white/50 leading-relaxed;
+}

@@ -1,0 +1,161 @@
+@reference "../global.css";
+
+/* Container principal centralizado */
+.conteiner {
+    @apply flex h-screen w-screen items-center justify-center p-4 overflow-hidden relative; 
+    background-color: #0E0038;
+    background-image:
+        radial-gradient(1.5px 1.5px at 15% 20%, rgba(255,255,255,0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 70%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(2px 2px at 75% 15%, rgba(255,255,255,0.7) 0%, transparent 100%),
+        radial-gradient(1px 1px at 85% 60%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 50% 85%, rgba(255,255,255,0.4) 0%, transparent 100%);
+}
+
+/* Orbes de luz ao fundo */
+.orbeRoxo {
+    @apply absolute w-[450px] h-[450px] rounded-full blur-[110px] opacity-40 pointer-events-none;
+    background: radial-gradient(circle, #7000ff 0%, transparent 70%);
+    top: 5%;
+    right: 15%;
+}
+
+.orbeAzul {
+    @apply absolute w-[450px] h-[450px] rounded-full blur-[120px] opacity-35 pointer-events-none;
+    background: radial-gradient(circle, #00d4ff 0%, transparent 70%);
+    bottom: 5%;
+    left: 15%;
+}
+
+/* Placa principal em Liquid Glass */
+.cardGlass {
+    @apply flex w-full max-w-5xl h-[88vh] max-h-[720px] rounded-3xl overflow-hidden relative z-10;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Painel Esquerdo: Mascote */
+.painelEsquerdo {
+    @apply hidden md:flex flex-1 items-center justify-center relative p-8 overflow-hidden rounded-l-3xl;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+}
+
+/* Glow atrás do mascote */
+.glowMascote {
+    @apply absolute w-72 h-72 rounded-full blur-[80px] pointer-events-none;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.35) 0%, transparent 70%);
+}
+
+.imagemMascote {
+    @apply max-w-full max-h-[80%] object-contain z-10 transition-transform duration-500 hover:scale-105;
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.4));
+    animation: flutuar 6s ease-in-out infinite;
+}
+
+/* Painel Direito: Formulário */
+.painelDireito {
+    @apply flex flex-col justify-center w-full md:w-1/2 p-8 md:p-12 z-20;
+}
+
+.titulo {
+    @apply text-white font-bold mb-1 text-3xl md:text-4xl tracking-tight;
+}
+
+.subtitulo {
+    @apply text-white/60 text-sm mb-5;
+}
+
+.formulario {
+    @apply flex flex-col gap-3.5;
+}
+
+.label {
+    @apply text-xs font-medium text-white/80 -mb-2;
+}
+
+/* Campos de Input em Estilo Vidro */
+.campoInputContainer {
+    @apply flex items-center gap-3 rounded-xl px-4 py-3 border transition-all duration-200;
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.campoInputContainer:focus-within {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.campoIcone {
+    @apply text-white/60 shrink-0 text-lg;
+}
+
+.campo {
+    @apply flex-1 text-sm outline-none bg-transparent text-white placeholder-white/40;
+}
+
+.mensagem {
+    @apply text-rose-400 text-xs mt-0.5;
+}
+
+/* Botão principal */
+.botao {
+    @apply text-white rounded-xl py-3.5 text-sm font-semibold transition-all duration-300 mt-2 cursor-pointer relative overflow-hidden;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.8) 0%, rgba(168, 85, 247, 0.8) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(112, 0, 255, 0.3);
+}
+
+.botao:hover:not(:disabled) {
+    box-shadow: 0 6px 25px rgba(168, 85, 247, 0.5);
+    transform: translateY(-1px);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.95) 0%, rgba(168, 85, 247, 0.95) 100%);
+}
+
+.botao:disabled {
+    @apply opacity-50 cursor-not-allowed;
+}
+
+.separador {
+    @apply text-xs text-center my-3 font-medium text-white/40 relative flex items-center justify-center gap-3;
+}
+
+.separador::before,
+.separador::after {
+    content: '';
+    @apply flex-1 h-[1px] bg-white/10;
+}
+
+.botoesExtras {
+    @apply flex gap-3;
+}
+
+.botaoExterno {
+    @apply text-white/90 rounded-xl py-2.5 text-sm flex items-center justify-center gap-2 transition-all flex-1 cursor-pointer;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.botaoExterno:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.jaPossuiConta {
+    @apply text-xs text-center mt-4 text-white/70;
+}
+
+.linkLogin {
+    @apply text-white font-semibold hover:underline ml-1 bg-transparent border-none cursor-pointer;
+}
+
+/* Animação de flutuação */
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+}

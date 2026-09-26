@@ -1,0 +1,21 @@
+@reference "../../global.css";
+
+.conteiner {
+    @apply flex flex-col items-center justify-center gap-4 py-16 text-white/60;
+}
+
+.spinner {
+    @apply w-8 h-8 rounded-full border-[3px] border-white/15;
+    border-top-color: #4747F2;
+    animation: girar 0.7s linear infinite;
+}
+
+.texto {
+    @apply text-sm;
+}
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
+}

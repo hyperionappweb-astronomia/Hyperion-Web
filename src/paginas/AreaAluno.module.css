@@ -1,0 +1,83 @@
+@reference "../global.css";
+
+.conteiner {
+    @apply w-full h-full text-white;
+}
+
+.cabecalho {
+    @apply mb-8;
+}
+
+.titulo {
+    @apply text-2xl md:text-3xl font-bold;
+}
+
+.subtitulo {
+    @apply text-white/50 text-sm mt-1;
+}
+
+.grade {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-6;
+}
+
+.card {
+    @apply bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4 backdrop-blur-sm hover:border-Tomclaro1/50 transition-colors duration-300;
+}
+
+.cardCabecalho {
+    @apply flex items-center gap-2 text-white/70;
+}
+
+.cardIcone {
+    @apply flex items-center justify-center w-9 h-9 rounded-lg bg-Tomclaro1/15 text-Tomclaro2 flex-shrink-0;
+}
+
+.cardTitulo {
+    @apply text-sm font-medium;
+}
+
+.cardNumero {
+    @apply text-3xl font-bold;
+}
+
+.cardNumeroTotal {
+    @apply text-base font-normal text-white/40;
+}
+
+.cardLegenda {
+    @apply text-xs text-white/40;
+}
+
+/* Barra de progresso simples */
+
+.barraFundo {
+    @apply w-full h-2 rounded-full bg-white/10 overflow-hidden;
+}
+
+.barraProgresso {
+    @apply h-full rounded-full bg-linear-to-r from-Tomclaro1 to-Tomclaro2 transition-all duration-500;
+}
+
+/* Mini gráfico de barras (últimos 7 dias) */
+
+.miniGrafico {
+    @apply flex items-end gap-1.5 h-16;
+}
+
+.barraMini {
+    @apply flex-1 rounded-t-md bg-linear-to-t from-Tomclaro1 to-Tomclaro2;
+}
+
+/* Gráfico de rosca (taxa de acerto) */
+
+.donutConteiner {
+    @apply flex items-center justify-center py-2;
+}
+
+.donut {
+    @apply w-28 h-28 rounded-full flex items-center justify-center transition-all duration-500;
+}
+
+.donutMiolo {
+    @apply w-20 h-20 rounded-full bg-Tomescuro1 flex items-center justify-center text-lg font-bold;
+}
