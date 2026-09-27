@@ -8,7 +8,6 @@ import { HiOutlineMail, HiOutlineLocationMarker, HiOutlineUser, HiOutlineChatAlt
 import { ModalMensagem } from '../componentes/ModalMensagem'
 import { enviarMensagemContato } from '../servicos/contatoServico'
 import { EstrelasFundo } from '../componentes/layout/Estrelasfundo';
-import { Rodape } from '../componentes/layout/Rodape';
 
 type FormValues = {
     nome: string

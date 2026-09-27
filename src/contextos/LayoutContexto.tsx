@@ -36,7 +36,7 @@ export const LayoutProvider = ({ children }: LayoutProviderProps) => {
             .finally(() => setCarregandoUsuarioContexto(false))
 
         // Escuta mudanças de sessão a partir daqui: login, logout, token
-        // expirado, login feito em outra aba, etc.
+        // expirado, login feito em outra aba
         const cancelarInscricao = ouvirMudancasDeSessao((usuario) => {
             setUsuarioContexto(usuario)
             setCarregandoUsuarioContexto(false)

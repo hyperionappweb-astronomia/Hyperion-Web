@@ -76,9 +76,9 @@ export function Home() {
         </div>
       </main>
 
-      {/* FOGUETE E LISTA DE CONTEÚDO */}
+      {/* Jupiter E LISTA DE CONTEÚDO */}
       <section className={estilos.secaoConteudo}>
-        {/* Lado Esquerdo: Espaço do Foguete */}
+        {/* Lado Esquerdo: Espaço de Jupiter */}
         <div className={estilos.containerFoguete}>
           <div className={estilos.foguete}>
             <Jupiter tamanho={370} />
