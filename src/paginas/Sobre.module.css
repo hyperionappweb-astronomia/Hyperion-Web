@@ -89,7 +89,7 @@
     @apply h-[3px] bg-Tomescuro1 rounded-full mt-auto gap-6;
 }
 
-/* ASTRONAUTA */
+/* ASTRONAUTA: em construção */
 
 .containerAstronauta {
     @apply flex justify-start mt-20 pb-10;
@@ -97,4 +97,66 @@
 
 .astronauta {
     @apply w-64 h-64 md:w-80 md:h-80 border-2 border-dashed border-Tomclaro2/30 rounded-2xl flex items-center justify-center text-xs text-gray-400;
+}
+
+/* --- FUNCIONALIDADES --- */
+
+.tituloFuncionalidades {
+    @apply text-[36px] md:text-[42px] font-bold text-center text-white mt-30;
+}
+
+.gradeFuncionalidades {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-20 mt-16;
+}
+
+.cardFuncionalidade {
+    @apply relative flex flex-col gap-3 rounded-2xl p-6 transition-all duration-300 hover:border-Tomclaro1/50 hover:-translate-y-1;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.iconeFuncionalidade {
+    @apply flex items-center justify-center w-11 h-11 rounded-xl bg-linear-to-br from-Tomclaro1 to-Tomclaro2 text-white;
+}
+
+.tituloFuncionalidade {
+    @apply text-white text-[22px] font-bold mt-1;
+}
+
+.textoFuncionalidade {
+    @apply text-white text-[16px] font-medium leading-relaxed;
+}
+
+/* --- CRIADORES --- */
+
+.tituloCriadores {
+    @apply text-[36px] md:text-[42px] font-bold text-center text-white mt-30;
+}
+
+.gradeCriadores {
+    @apply flex flex-wrap justify-center gap-16 mt-16 pb-10;
+}
+
+.cardCriador {
+    @apply relative flex flex-col items-center gap-4 rounded-2xl p-8 w-full sm:w-72 transition-all duration-300 hover:border-Tomclaro1/50 hover:-translate-y-1;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.avatarCriador {
+    @apply flex items-center justify-center w-20 h-20 rounded-full bg-linear-to-br from-Tomclaro1 to-Tomclaro2 text-white text-2xl font-bold;
+}
+
+.nomeCriador {
+    @apply text-white font-semibold text-[18px] text-center;
 }
